@@ -10,3 +10,23 @@ body {
 	padding-top: 15px;
 	text-align: center;
 }
+.message{
+	text-align: center;
+	color: #66FF99;
+}
+#responseMessage{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-align: center;
+	color: #66FF99;
+}
+#previous{
+	padding-top: 30px;
+	text-align: center;
+	color: #CCFFFF;
+}
+#message{
+	font-size: 14px;
+	font-weight: 200;
+	color: #CCFFFF;
+}

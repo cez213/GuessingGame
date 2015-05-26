@@ -21,7 +21,6 @@ In order to create this project you are going to need the following files:
 - CSS File
 - JS File
 
-
 ###Project Requirements:
 
 - When a game begins, there should be a random number generated between 1-100.

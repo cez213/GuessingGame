@@ -19,6 +19,8 @@
       <!-- Custom styles for this template -->
       <link rel="stylesheet" href="main.css">
       <link href="cover.css" rel="stylesheet">
+      <script src="/users/carolynzelenetz/jquery-1.11.3.js"></script>
+      <script src="application.js"></script>
 
     </head>
 
@@ -36,8 +38,8 @@
               <nav>
                 <ul class="nav masthead-nav">
                   <li class="active"><a href="#">Home</a></li>
-                  <li><a href="#">New Game</a></li>
-                  <li><a href="#">Hint</a></li>
+                  <li><a id="newGame" href="#">New Game</a></li>
+                  <li><a id="hint" href="#">Hint</a></li>
                 </ul>
               </nav>
             </div>
@@ -49,9 +51,12 @@
               <input type="text" class="form-control" placeholder="Input Number 1-100">
             </div>
             <p class="lead">
+              <br><span id="responseMessage"></span>
               <br><a href="#" class="btn btn-lg btn-default">Submit</a>
             </p>
-            <p class="lead">5 Guess Remaining</p>
+            <p class="message">5 Guesses Remaining</p>
+            <h4 id="previous">Previous Guesses:</h4>
+            <span id="message"></span>
           </div>
 
           <div class="mastfoot">
