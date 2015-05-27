@@ -113,7 +113,6 @@ $(document).ready(function(){
 	$('.nav').on('click', '#hint', function(){
 		$('#responseMessage').text(number);
 	});
-
 });
 
 
