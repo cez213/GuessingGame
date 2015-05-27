@@ -6,6 +6,7 @@ $(document).ready(function(){
 
 	// counter for number of guesses remaining
 	var counter = 0;
+	var previousGuess = [];
 
 	// function for refreshing game
 	var restart = function(){
@@ -20,8 +21,6 @@ $(document).ready(function(){
 		number = Math.floor((Math.random()*100)+1);
 		//alert(number);
 	}
-	
-	var previousGuess = [];
 
 	// response function
 	var responseFunc = function(){
@@ -31,7 +30,7 @@ $(document).ready(function(){
 
 		var response = "";
 
-		if(userNumber <= 100 && userNumber >= 1 && counter<4){
+		if(userNumber <= 100 && userNumber >= 1 && counter<=4){
 			if(userNumber === number){
 				response = "You Win!";
 				$('#responseMessage').text(response).css({'color': '#FF0066', 'font-size':'40px', 'font-weight': 'bold'});
@@ -94,6 +93,11 @@ $(document).ready(function(){
 
 		// clear user input field before next guess
 		$('.form-control').val('');
+
+		//reset when game is over
+		if(response === "You Win!" || response === "Game Over"){
+			$('.inner').on('click', '.btn', restart);
+		}
 	}
 
 	// actions that occur after mouse clicks 'submit'
